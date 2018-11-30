@@ -30,8 +30,8 @@
 
 <div><p>Il fait actuellement <?php echo $temperature; ?>° et le taux d'humidité est de <?php echo $humidite; ?>%.</p></div>
 
-
-<img src="" alt="">
+<div class="temp"></div>
+<img src="img/thermometer.jpg" alt="Image d'un thermometre">
 
 
 
