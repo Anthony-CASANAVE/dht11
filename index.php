@@ -43,9 +43,9 @@ $infos = json_decode($json_data);
             <?php echo $infos->humidite; ?>%.</p>
     </div>
 
-    <div class="temp"></div>
-    <img src="img/thermometer.jpg" alt="Image d'un thermometre">
-
+    <div id="thermometer">
+        <div id="bargraph"></div>
+    </div>
 
 
 
