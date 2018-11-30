@@ -28,6 +28,19 @@
 
 <body>
 
+<div><p>Il fait actuellement <?php echo $temperature; ?>° et le taux d'humidité est de <?php echo $humidite; ?>%.</p></div>
+
+
+<img src="" alt="">
+
+
+
+
+
+
+
+
+
 
 
 
