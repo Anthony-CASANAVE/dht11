@@ -30,7 +30,9 @@
     
 $json_data = file_get_contents('data.txt');
 $infos = json_decode($json_data);
-
+$bargraphWeight = 161 + $infos->temperature * 4;
+$bargraphTop = 315 -  $infos->temperature * 4;
+    
 ?>
 
 <body>
@@ -44,7 +46,7 @@ $infos = json_decode($json_data);
     </div>
 
     <div id="thermometer">
-        <div id="bargraph"></div>
+        <div id="bargraph" style="height: <?php echo $bargraphWeight; ?>px; top: <?php echo $bargraphTop; ?>px;" ></div>
     </div>
 
 
