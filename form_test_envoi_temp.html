@@ -26,48 +26,18 @@
 
 </head>
 
-<?php
-    
-$json_data = file_get_contents('data.txt');
-$infos = json_decode($json_data);
-$bargraphWeight = 161 + $infos->temperature * 4;
-$bargraphTop = 315 -  $infos->temperature * 4;
-    
-?>
 
-<body>
 
-    <h1>Températures !</h1>
-
-    <div>
-        <p>Il fait actuellement
-            <?php echo $infos->temperature; ?>° et le taux d'humidité est de
-            <?php echo $infos->humidite; ?>%.</p>
-        <?php
-        
-        $filename = 'data.txt';
-               {
-              echo "La météo à été mise à jour le : " . date("d-m-Y         H:i:s.", filectime($filename));
-              }
-        ?>
-        
-    </div>
-
-    <div id="thermometer">
-        <div id="bargraph" style="height: <?php echo $bargraphWeight; ?>px; top: <?php echo $bargraphTop; ?>px;"></div>
-    </div>
+<form action="store_temp.php" method="post" name="temperature">
+    <span>Indiquez une température : </span>
+    <input type="text" placeholder="Température"><input type="submit">
+</form>
 
 
 
+<!--    __________Bootstrap____________-->
 
-
-
-
-
-
-    <!--    __________Bootstrap____________-->
-
-    <!--
+<!--
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -75,11 +45,11 @@ $bargraphTop = 315 -  $infos->temperature * 4;
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 -->
 
-    <!--    __________Bootstrap____________-->
+<!--    __________Bootstrap____________-->
 
 
 
-    <script src="script/index.js"></script>
+<script src="script/index.js"></script>
 
 </body>
 
