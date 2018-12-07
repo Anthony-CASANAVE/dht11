@@ -27,10 +27,15 @@
 </head>
 
 
+<span>Indiquez une température et humidité : </span>
 
-<form action="store_temp.php" method="post" name="temperature">
-    <span>Indiquez une température : </span>
-    <input type="text" placeholder="Température"><input type="submit">
+<form action="store_temp.php" method="post">
+   
+    <input name="temperature" type="text" placeholder="Température">
+    
+    <input name="humidite" type="text" placeholder="Humidité">
+    
+    <input type="submit">
 </form>
 
 

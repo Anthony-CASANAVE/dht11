@@ -3,6 +3,8 @@
 <html>
 
 <head>
+    
+    <meta http-equiv="refresh" content="1">
 
     <meta charset="utf-8">
 
@@ -28,7 +30,7 @@
 
 <?php
     
-$json_data = file_get_contents('data.txt');
+$json_data = file_get_contents('data.json');
 $infos = json_decode($json_data);
 $bargraphWeight = 161 + $infos->temperature * 4;
 $bargraphTop = 315 -  $infos->temperature * 4;
